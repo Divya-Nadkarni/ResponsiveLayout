@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display:grid;
+    grid-template-areas: 'header header header'
+    'feature1 feature2 feature3'
+    'signup signup signup'
+    'content content content';
+    height: 100vh;
+    margin: 50px;
+
+}
+.container div{
+    display: grid;
+    place-items: center;
+}
+#header{
+    background-color: rgb(167, 250, 232);
+    grid-area: header;
+    padding:40px
+}
+#content{
+grid-area: content;
+background-color: rgb(228, 169, 93);
+padding: 60px;
+}
+
+#signup{
+    grid-area: signup;
+    background-color: rgb(76, 100, 131);
+}
+
+
+
+#feature1{
+    grid-area: feature1;
+    background-color: rgb(243, 133, 92);
+    
+}
+#feature2{
+    grid-area: feature2;
+    background-color: rgb(148, 184, 225);
+
+}
+#feature3{
+    grid-area: feature3;
+    background-color: rgb(243, 112, 92);
+   
+}
+
+
+
+
+@media (min-width:500px) and (max-width:800px){
+    .container{
+        display: grid;
+        grid-template-areas: 'header header'
+        'content content'
+        'signup feature1'
+        'feature3 feature2'
+        ;
+    }
+}
+
+@media (max-width:500px) {
+    .container{
+        display: grid;
+        grid-template-areas: 'header'
+        'content'
+        'signup' 'feature1'
+        'feature3' 'feature2'
+        ;
+    }
+}
+
+
